@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Rg-Demo</string>
+    <string name="translate">Translate</string>
+    <string name="history">History</string>
 </resources>
