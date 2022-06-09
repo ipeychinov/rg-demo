@@ -15,8 +15,9 @@ class LocalTranslationSourceImpl(
     private val dao: TranslationDao
 ) : LocalTranslationSource {
 
-    override suspend fun saveTranslation(translation: Translation) =
+    override suspend fun saveTranslation(translation: Translation) {
         dao.insertTranslation(translation)
+    }
 
     override suspend fun getTranslationHistory(): List<Translation> = dao.fetchTranslationHistory()
 

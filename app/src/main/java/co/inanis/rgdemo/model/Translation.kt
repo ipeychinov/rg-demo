@@ -9,9 +9,8 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 @Entity(tableName = "translations")
 data class Translation(
-    @PrimaryKey(autoGenerate = true) private val id: Int = 0,
+    @PrimaryKey(autoGenerate = true) var id: Int = 0,
     @SerializedName("translation") val type: TranslationType,
     val text: String,
     val translated: String,
-    val timestamp: Long = System.currentTimeMillis(),
 ) : Parcelable

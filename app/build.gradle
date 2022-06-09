@@ -76,4 +76,9 @@ dependencies {
     testImplementation("com.google.truth:truth:$truthVersion")
     androidTestImplementation("androidx.test.ext:junit:$androidJunitVersion")
     androidTestImplementation("androidx.test.espresso:espresso-core:$espressoVersion")
+    androidTestImplementation("androidx.test:core-ktx:$testCoreVersion")
+    androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion")
+    androidTestImplementation("io.insert-koin:koin-test:$koinVersion")
+    androidTestImplementation("io.insert-koin:koin-test-junit4:$koinVersion")
+    androidTestImplementation("com.google.truth:truth:$truthVersion")
 }
