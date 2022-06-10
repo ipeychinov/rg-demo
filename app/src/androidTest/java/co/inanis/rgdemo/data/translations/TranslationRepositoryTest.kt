@@ -37,7 +37,7 @@ class TranslationRepositoryTest {
 
         assertThat(result.isSuccess).isTrue()
         assertThat(result.success.contents.type).isEqualTo(TranslationType.SINDARIN)
-        assertThat(result.success.contents.translated).isEqualTo("Text, but in Sindarin")
+        assertThat(result.success.contents.text).isEqualTo("Text")
     }
 
     @Test

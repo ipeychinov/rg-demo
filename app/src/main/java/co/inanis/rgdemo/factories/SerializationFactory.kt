@@ -5,6 +5,7 @@ import co.inanis.rgdemo.model.Translation
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import org.koin.dsl.module
+import retrofit2.Converter
 import retrofit2.converter.gson.GsonConverterFactory
 
 val serializationModule = module {
@@ -16,7 +17,7 @@ val serializationModule = module {
             .create()
     }
 
-    single { GsonConverterFactory.create(get()) }
+    single<Converter.Factory> { GsonConverterFactory.create(get()) }
 
     single { TranslationSerializer(Gson()) }
 

@@ -25,6 +25,7 @@ buildscript {
 
         /*Networking*/
         retrofitVersion = '2.9.0'
+        okHttpVersion = '4.9.3'
 
         /*Utils*/
         brokerVersion = '1.1.1'
@@ -35,6 +36,7 @@ buildscript {
         espressoVersion = '3.4.0'
         truthVersion = '1.1.3'
         testCoreVersion = '1.4.0'
+        archCoreVersion = '2.1.0'
     }
     repositories {
         google()

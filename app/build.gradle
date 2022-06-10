@@ -65,6 +65,8 @@ dependencies {
     /*Networking*/
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
+    implementation platform("com.squareup.okhttp3:okhttp-bom:$okHttpVersion")
+    implementation("com.squareup.okhttp3:logging-interceptor")
 
     /*Utils*/
     implementation("com.github.adrielcafe.broker:broker-core:$brokerVersion")
@@ -74,6 +76,8 @@ dependencies {
     testImplementation("io.insert-koin:koin-test:$koinVersion")
     testImplementation("io.insert-koin:koin-test-junit4:$koinVersion")
     testImplementation("com.google.truth:truth:$truthVersion")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion")
+    testImplementation("androidx.arch.core:core-testing:$archCoreVersion")
     androidTestImplementation("androidx.test.ext:junit:$androidJunitVersion")
     androidTestImplementation("androidx.test.espresso:espresso-core:$espressoVersion")
     androidTestImplementation("androidx.test:core-ktx:$testCoreVersion")

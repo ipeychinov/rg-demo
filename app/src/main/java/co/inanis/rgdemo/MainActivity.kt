@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity(), GlobalBroker.Subscriber {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
         binding.navMenu.setupWithNavController(findNavController(R.id.navHost))
 

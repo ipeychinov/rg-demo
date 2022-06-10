@@ -29,8 +29,16 @@ class TranslationViewModel(
         }
     }
 
+    private val _history = MutableLiveData<List<Translation>>()
     val history = liveData {
         emit(repository.getTranslationHistory())
+        emitSource(_history)
+    }
+
+    fun refreshHistory() {
+        viewModelScope.launch {
+            _history.value = repository.getTranslationHistory()
+        }
     }
 
     private fun onError(message: String?) = publish(ErrorEvent(message))
